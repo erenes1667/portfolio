@@ -1,12 +1,12 @@
 # Sources
 
-Every number on the page points to a file. Project numbers come from each repo's README results table, read on 2026-10-24. Work numbers come from the resume in this folder.
+Every number on the page points to a file. Project numbers come from each repo's README results table, read on 2026-10-24 and re-read after the 21:25 README commits. Work numbers come from the resume in this folder.
 
 ## Projects section
 
 | Card | Number on the page | Source |
 |---|---|---|
-| agent-evals-lab | 40 eval cases, 92.5 to 100% pass on Haiku over two runs | README, Results, graph v2 table (`haiku-5-5-v2` 92.5%, `haiku-5-5-v2-rerun` 100%) |
+| agent-evals-lab | 40 eval cases, Haiku 92.5% on run one and 100% on run two | README, Results, graph v2 table (`haiku-5-5-v2` 92.5%, `haiku-5-5-v2-rerun` 100%) |
 | agent-evals-lab | $0.011 per answer on Haiku, $0.025 on Sonnet | README, Results (`haiku-5-5-v2-rerun` $0.01115; graph v1 table, sonnet-5-5 $0.0251) |
 | agent-evals-lab | 0.8 Cohen's kappa vs 10 hand labels | README, Judge calibration |
 | agent-evals-lab | offline test suite with a fake LLM, 1,681 API calls, $5.78 spent | README, Quickstart (`make test`) and Spend ($5.7772) |
@@ -17,7 +17,7 @@ Every number on the page points to a file. Project numbers come from each repo's
 | ad-creative-agent | $0.36 per full run, 9 concepts, top 6, 18 calls | README, Results, Lantern Drift run ($0.3584) |
 | ad-creative-agent | 0 of 108 banned-claim hits, 12 briefs | README, Results, copy eval rows |
 | ad-creative-agent | 9 to 0 near-repeat angles | README, Results, creative memory row |
-| ad-creative-agent | 49 offline tests, 15 of 15 seeded defects blocked, about $5.91 of $6 | README, Results table |
+| ad-creative-agent | offline tests (README gives no count), 15 of 15 seeded defects blocked (12 by the vision critic, 3 by code), about $5.91 of $6 | README, headline paragraph and Results table (vision critic row, total spend row) |
 
 Crops in `assets/proj-*.webp` are cut from each repo's `docs/shot-1440.png`.
 

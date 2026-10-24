@@ -70,7 +70,7 @@
     <div class="sec-head" data-reveal>
       <p class="eyebrow"><i class="dot"></i>Public proof &middot; live runs 2026-10-24</p>
       <h2>Three projects you can run.</h2>
-      <p>Personal projects on synthetic data. Each one has the code, a live demo page and a README where every number below comes from.</p>
+      <p>Personal projects, no employer or client data. Each one has the code, a live demo page and a README where every number below comes from.</p>
     </div>
     <div class="pgrid">
 
@@ -84,7 +84,7 @@
           <h3>agent-evals-lab</h3>
           <p class="line">A LangGraph support assistant with its own MCP server, an eval suite with an LLM judge, and a model-routing cost study.</p>
           <ul class="pnums">
-            <li><b>40</b><span>eval cases. Haiku passes 92.5 to 100% over two runs</span></li>
+            <li><b>40</b><span>eval cases. Haiku passed 92.5% on run one, 100% on run two</span></li>
             <li><b>$0.011</b><span>per answer on Haiku. Sonnet: $0.025 on the same suite</span></li>
             <li><b>0.8</b><span>Cohen's kappa, Haiku judge vs 10 hand labels</span></li>
           </ul>
@@ -97,7 +97,7 @@
       </article>
 
       <article class="proj" data-reveal>
-        <figure class="shot" style="background:#FAFAF7">
+        <figure class="shot" style="background:#FAFAF7;--shot-bg:#FAFAF7">
           <img src="assets/proj-gtm-brain.webp" width="948" height="592" alt="Six first-line cards from the gtm-brain live run, each with the written line, the verbatim evidence quote from the homepage and a passed badge." loading="lazy">
           <figcaption>docs page, crop</figcaption>
         </figure>
@@ -119,20 +119,20 @@
       </article>
 
       <article class="proj" data-reveal>
-        <figure class="shot" style="background:#FBF7EF">
-          <img src="assets/proj-ad-creative-agent.webp" width="1050" height="656" alt="The top three ad concepts from the ad-creative-agent run: three dark lantern images with headlines, scores and the copy for Meta, TikTok and Google UAC under each." loading="lazy">
+        <figure class="shot" style="background:#FBF7EF;--shot-bg:#FBF7EF">
+          <img src="assets/proj-ad-creative-agent.webp" width="1050" height="656" alt="The top three ad concepts from the ad-creative-agent run: three placeholder lantern images with headlines, scores and the copy for Meta, TikTok and Google UAC under each." loading="lazy">
           <figcaption>docs page, crop</figcaption>
         </figure>
         <div class="proj-body">
           <p class="eyebrow">Agent pipeline &middot; vision critic &middot; ranker</p>
           <h3>ad-creative-agent</h3>
-          <p class="line">Turns a launch brief into scored ad concepts: three audiences, three hooks each, copy for three platforms, an image per concept and a ranked top 6.</p>
+          <p class="line">Turns a launch brief into scored ad concepts: three audiences, three hooks each, copy for three platforms, a placeholder image per concept (no diffusion model ran) and a ranked top 6.</p>
           <ul class="pnums">
             <li><b>$0.36</b><span>per full run: 9 concepts, top 6, 18 model calls</span></li>
             <li><b>0 of 108</b><span>concepts with a banned claim, 12 briefs</span></li>
             <li><b>9 to 0</b><span>near-repeat angles, creative memory off then on</span></li>
           </ul>
-          <p class="meta">49 offline tests &middot; vision critic blocked 15 of 15 seeded defects &middot; about $5.91 of the $6 cap</p>
+          <p class="meta">Offline tests, LLM mocked &middot; 15 of 15 seeded defects blocked, 12 by the vision critic and 3 by code &middot; about $5.91 of the $6 cap</p>
           <div class="plinks">
             <a class="lnk" href="https://github.com/erenes1667/ad-creative-agent" target="_blank" rel="noopener noreferrer">Code</a>
             <a class="lnk" href="https://erenes1667.github.io/ad-creative-agent/" target="_blank" rel="noopener noreferrer">Live demo</a>
@@ -291,8 +291,11 @@
         <li><b>Pre-send</b><span>links, images and renders checked before send</span></li>
       </ul>
     </article>
+  </div>
 
-    <!-- 05 Ops and local AI -->
+  <!-- 05 Ops and local AI, ink band -->
+  <div class="band">
+    <div class="wrap">
     <article class="case full" id="c5" data-reveal>
       <div class="case-head">
         <div class="case-num">05</div>
@@ -324,6 +327,7 @@
         <li><b>$0</b><span>per minute of transcription</span></li>
       </ul>
     </article>
+    </div>
   </div>
 </section>
 
