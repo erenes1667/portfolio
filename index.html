@@ -20,7 +20,7 @@
   <div class="wrap">
     <a class="mark" href="#top" aria-label="Enes Eren, top of page"><i></i>Enes Eren</a>
     <ul>
-      <li><a href="#projects">Projects</a></li>
+      <li class="hide-s"><a href="#projects">Projects</a></li>
       <li class="hide-m"><a href="#work">Work</a></li>
       <li class="hide-m"><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -70,7 +70,7 @@
     <div class="sec-head" data-reveal>
       <p class="eyebrow"><i class="dot"></i>Public proof &middot; live runs 2026-10-24</p>
       <h2>Three projects you can run.</h2>
-      <p>Personal projects, no employer or client data. Each one has the code, a live demo page and a README where every number below comes from.</p>
+      <p>Personal projects, no employer or client data. Each one has the code, a live demo page and a README where every number below comes from. Each ran on a self-imposed $6 API budget.</p>
     </div>
     <div class="pgrid">
 
@@ -84,10 +84,10 @@
           <p class="line">A LangGraph support assistant with its own MCP server, an eval suite with an LLM judge, and a model-routing cost study.</p>
           <ul class="pnums">
             <li><b>40</b><span>eval cases. Haiku passed 92.5% on run one, 100% on run two</span></li>
-            <li><b>$0.011</b><span>per answer on Haiku. Sonnet: $0.025 on the same suite</span></li>
-            <li><b>0.8</b><span>Cohen's kappa, Haiku judge vs 10 hand labels</span></li>
+            <li><b>$0.011</b><span>per answer on Haiku. Sonnet: $0.025, on the earlier suite version</span></li>
+            <li><b>0.8</b><span>kappa, Haiku judge agreement with 10 hand labels</span></li>
           </ul>
-          <p class="meta">Offline test suite, fake LLM &middot; 1,681 API calls &middot; $5.78 spent, under the $6 cap</p>
+          <p class="meta">Offline tests with a fake LLM &middot; 1,681 API calls &middot; $5.78 spent</p>
           <div class="plinks">
             <a class="lnk" href="https://github.com/erenes1667/agent-evals-lab" target="_blank" rel="noopener noreferrer">Code</a>
             <a class="lnk" href="https://erenes1667.github.io/agent-evals-lab/" target="_blank" rel="noopener noreferrer">Live demo</a>
@@ -104,11 +104,11 @@
           <h3>gtm-brain</h3>
           <p class="line">Turns a list of company domains into checked opening lines, and exports only what a human approved.</p>
           <ul class="pnums">
-            <li><b>94%</b><span>first-try pass, 17 of 18, first prompt. Shipped prompt: 78%</span></li>
+            <li><b>94%</b><span>first-try pass, 17 of 18, first prompt, in-sample. Shipped prompt: 78%</span></li>
             <li><b>$0.0165</b><span>per account. 25 accounts, $0.41 for the run</span></li>
             <li><b>13 of 13</b><span>held-out lines passed the checker, 19 new domains</span></li>
           </ul>
-          <p class="meta">47 offline tests &middot; n8n workflow ran once &middot; $3.49 of the $6 cap</p>
+          <p class="meta">47 offline tests &middot; n8n workflow ran once &middot; $3.49 spent</p>
           <div class="plinks">
             <a class="lnk" href="https://github.com/erenes1667/gtm-brain" target="_blank" rel="noopener noreferrer">Code</a>
             <a class="lnk" href="https://erenes1667.github.io/gtm-brain/" target="_blank" rel="noopener noreferrer">Live demo</a>
@@ -123,13 +123,13 @@
         <div class="proj-body">
           <p class="eyebrow">Agent pipeline &middot; vision critic &middot; ranker</p>
           <h3>ad-creative-agent</h3>
-          <p class="line">Turns a launch brief into scored ad concepts. Three audiences, three hooks each, copy for three platforms, a ranked top 6. Images are placeholders, no diffusion model ran.</p>
+          <p class="line">Turns a launch brief into scored ad concepts: three audiences, three hooks each, copy for three platforms, a ranked top 6.</p>
           <ul class="pnums">
             <li><b>$0.36</b><span>per full run: 9 concepts, top 6, 18 model calls</span></li>
             <li><b>0 of 108</b><span>concepts with a banned claim, 12 briefs</span></li>
-            <li><b>9 to 0</b><span>near-repeat angles, creative memory off then on</span></li>
+            <li><b>9 to 0</b><span>near-repeat angles, memory off then on, 3 trials per arm</span></li>
           </ul>
-          <p class="meta">Offline tests, LLM mocked &middot; 15 of 15 seeded defects blocked, 12 by the vision critic and 3 by code &middot; about $5.91 of the $6 cap</p>
+          <p class="meta">Offline tests, LLM mocked &middot; 15 of 15 seeded defects blocked &middot; placeholder images, no diffusion model ran &middot; about $5.91 spent</p>
           <div class="plinks">
             <a class="lnk" href="https://github.com/erenes1667/ad-creative-agent" target="_blank" rel="noopener noreferrer">Code</a>
             <a class="lnk" href="https://erenes1667.github.io/ad-creative-agent/" target="_blank" rel="noopener noreferrer">Live demo</a>
@@ -206,7 +206,7 @@
           <p class="line">The agency's own outbound engine. A Next.js app on Prisma and PostgreSQL, with a Python worker on systemd timers. 1,400 commits and counting.</p>
         </div>
         <div class="case-dg">
-          <div class="dg dg2" data-edges="lists>app app>db:v db>worker:h worker>forms">
+          <div class="dg dg2" data-edges="lists>app app>db db>worker worker>forms">
             <div class="n io" data-n="lists" style="grid-area:lists"><small>input</small><b>Prospect lists</b></div>
             <div class="n hub" data-n="app" style="grid-area:app"><small>app</small><b>Next.js</b><span>70 API routes</span></div>
             <div class="n" data-n="db" style="grid-area:db"><small>store</small><b>PostgreSQL</b><span>23 data models, Prisma</span></div>
@@ -298,14 +298,14 @@
         <div class="case-num">05</div>
         <p class="eyebrow">Always-on ops &middot; Linux VPS and local GPU</p>
         <h3>A VPS that runs the day and a GPU that transcribes for free.</h3>
-        <p class="line">55 cron jobs and 10+ systemd services run the schedule. A local RTX 4080 runs Whisper large-v3 for team notes.</p>
+        <p class="line">55 scheduled jobs and 10+ always-on services do the routine work. A local RTX 4080 runs Whisper large-v3 for team notes.</p>
       </div>
       <div class="case-dg">
         <div class="dg dg5" data-edges="cron>v2 sysd>v2 v2>v3 v3>v4 g1>g2 g2>g3">
           <div class="lane" style="grid-area:lv">always on<b>Linux VPS</b></div>
           <div class="stack" style="grid-area:v1">
-            <div class="n tier" data-n="cron"><b>55 cron jobs</b><span>the schedule</span></div>
-            <div class="n tier" data-n="sysd"><b>10+ systemd services</b><span>always running</span></div>
+            <div class="n tier" data-n="cron"><b>55 scheduled jobs</b><span>cron</span></div>
+            <div class="n tier" data-n="sysd"><b>10+ always-on services</b><span>systemd</span></div>
           </div>
           <div class="n" data-n="v2" style="grid-area:v2"><small>watch</small><b>Landing-page monitors</b><span>every 3 hours</span></div>
           <div class="n hub" data-n="v3" style="grid-area:v3"><small>assist</small><b>Telegram assistant</b><span>Claude API, prompt caching</span></div>
@@ -318,8 +318,8 @@
         </div>
       </div>
       <ul class="facts">
-        <li><b>55</b><span>cron jobs</span></li>
-        <li><b>10+</b><span>systemd services</span></li>
+        <li><b>55</b><span>scheduled jobs</span></li>
+        <li><b>10+</b><span>always-on services</span></li>
         <li><b>3 h</b><span>landing-page monitor interval</span></li>
         <li><b>$0</b><span>per minute of transcription</span></li>
       </ul>

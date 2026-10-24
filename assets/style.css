@@ -101,6 +101,8 @@ b, strong { font-weight: 600; }
 .nav ul a.btn { height: 38px; padding: 0 14px; font: 600 14px/1 var(--sans); color: var(--paper); }
 .nav ul a.btn:hover { color: var(--accent-ink); }
 @media (max-width: 719px) { .nav ul li.hide-m { display: none; } .nav ul { gap: 16px; } .nav ul a.btn { padding: 0 11px; } .nav ul a.btn .t { display: none; } }
+/* Phones: the Syne wordmark plus two links plus the button is 358px wide, the whole inner width at 390 (0 px gap, overflow at 360). Keep the name, Contact and the button. */
+@media (max-width: 479px) { .nav ul li.hide-s { display: none; } .nav .wrap { gap: 16px; } .mark { font-size: 16px; } }
 
 /* Buttons and links */
 .btn {
@@ -209,7 +211,7 @@ b, strong { font-weight: 600; }
 .plinks { display: flex; gap: 28px; margin-top: 4px; }
 @media (max-width: 1099px) {
   .proj.wide { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
-  .proj.wide .shot { border-right: 0; border-bottom: 1px solid var(--rule-strong); aspect-ratio: 16 / 10; min-height: 0; }
+  .proj.wide .shot { border-right: 0; border-bottom: 1px solid var(--rule-strong); aspect-ratio: 1008 / 734; min-height: 0; }
   .proj:not(.wide) .pnums { grid-template-columns: 1fr; gap: 14px; }
   .proj:not(.wide) .pnums li { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: baseline; }
   .proj:not(.wide) .pnums b { min-width: 92px; }
@@ -250,7 +252,8 @@ b, strong { font-weight: 600; }
 .sec-head p { grid-column: 9 / 13; color: var(--muted); }
 @media (max-width: 899px) {
   .sec { padding: 72px 0; }
-  .sec-head { margin-bottom: 40px; }
+  /* 12 columns with 32px gaps need 352px, wider than a 360px phone. Every child spans the row here, so one column (same for .case and .contact .wrap below). */
+  .sec-head { grid-template-columns: 1fr; margin-bottom: 40px; }
   .sec-head .eyebrow, .sec-head h2, .sec-head p { grid-column: 1 / -1; }
 }
 
@@ -275,11 +278,11 @@ b, strong { font-weight: 600; }
 .facts span { display: block; margin-top: 8px; font: 400 13px/1.45 var(--mono); color: var(--muted); }
 /* Full-width cases: the facts fill the right half of the header row instead of a fourth row under the diagram. */
 @media (min-width: 900px) {
-  .case.full .facts { grid-column: 8 / 13; grid-row: 1; order: 0; grid-template-columns: 1fr 1fr; gap: 28px 32px; align-self: end; }
+  .case.full .facts { grid-column: 8 / 13; grid-row: 1; order: 0; grid-template-columns: 1fr 1fr; gap: 28px 32px; align-self: start; }
 }
 @media (max-width: 899px) {
-  .case { padding: 56px 0; gap: 28px; }
-  .case-head, .case-dg, .case.alt .case-head, .case.alt .case-dg, .case.full .case-head, .case.full .case-dg { grid-column: 1 / -1; order: 0; }
+  .case { padding: 56px 0; gap: 28px; grid-template-columns: 1fr; }
+  .case-head, .case-dg, .case.alt .case-head, .case.alt .case-dg, .case.full .case-head, .case.full .case-dg, .facts { grid-column: 1 / -1; order: 0; }
   .case.alt .case-dg { order: 1; }
   .case-num { font-size: 56px; margin-bottom: 14px; }
   .facts { grid-template-columns: repeat(2, 1fr); gap: 20px 24px; }
@@ -323,7 +326,7 @@ b, strong { font-weight: 600; }
 .lane b { display: block; color: var(--ink); font-weight: 600; letter-spacing: 0; text-transform: none; font-size: 14px; margin-top: 2px; }
 
 /* Hero diagram */
-.dg-hero { grid-template-columns: repeat(4, 1fr); grid-template-areas: "task router tiers agents" ". human guards ."; gap: 44px 20px; }
+.dg-hero { grid-template-columns: repeat(4, 1fr); grid-template-areas: "task router tiers agents" ". . guards human"; gap: 44px 20px; }
 .dg-hero .n { padding: 12px 12px 13px; }
 .dg-hero .n b { font-size: 17px; }
 @media (max-width: 899px) { .dg-hero { grid-template-columns: 1fr; grid-template-areas: "task" "router" "tiers" "agents" "guards" "human"; gap: 32px; } .dg-hero .stack { grid-auto-flow: column; grid-auto-columns: 1fr; } }
@@ -338,8 +341,10 @@ b, strong { font-weight: 600; }
 
 
 /* 02 knock */
-.dg2 { grid-template-columns: repeat(4, 1fr); grid-template-areas: "lists app worker forms" ". db . ."; }
-@media (max-width: 899px) { .dg2 { grid-template-columns: 1fr; grid-template-areas: "lists" "app" "db" "worker" "forms"; gap: 32px; } }
+/* The store spans under the app and the worker: both talk to it, nothing goes app to worker directly. */
+.dg2 { grid-template-columns: repeat(4, 1fr); grid-template-areas: "lists app worker forms" ". db db ."; align-items: stretch; }
+.dg2 .n[data-n="db"] { justify-self: center; width: 72%; }
+@media (max-width: 899px) { .dg2 { grid-template-columns: 1fr; grid-template-areas: "lists" "app" "db" "worker" "forms"; gap: 32px; align-items: center; } .dg2 .n[data-n="db"] { justify-self: stretch; width: auto; } }
 
 /* 03 lead scoring */
 .dg3 { grid-template-columns: repeat(6, 1fr); grid-template-areas: "p1 p2 p3 p4 p5 p6"; gap: 28px; align-items: stretch; }
@@ -399,6 +404,7 @@ b, strong { font-weight: 600; }
 .foot { grid-column: 1 / -1; margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; font: 400 13px/1.5 var(--mono); color: var(--muted); }
 @media (max-width: 899px) {
   .contact { padding: 72px 0 40px; }
+  .contact .wrap { grid-template-columns: 1fr; }
   .contact .big, .contact .side { grid-column: 1 / -1; }
   .contact .side { padding-top: 0; }
   .foot { margin-top: 48px; }
