@@ -197,8 +197,9 @@ b, strong { font-weight: 600; }
 .proj.wide .shot { border-bottom: 0; border-right: 1px solid var(--rule-strong); aspect-ratio: auto; min-height: 100%; }
 .shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
 .proj.wide .shot img { object-fit: contain; object-position: center; }
-/* Narrow cards crop mid-row: dissolve the cut edge into the page colour instead of slicing it. */
-.proj:not(.wide) .shot::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: linear-gradient(to bottom, transparent, var(--shot-bg, #F7F7F5)); pointer-events: none; }
+/* Cropped shots dissolve the cut edge into the page colour instead of slicing it. The wide card is only cropped on phones (below). */
+.shot::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: linear-gradient(to bottom, transparent, var(--shot-bg, #F7F7F5)); pointer-events: none; }
+.proj.wide .shot::after { display: none; }
 @media (prefers-color-scheme: dark) { .shot { filter: brightness(.93); } }
 .proj-body { padding: 32px 32px 30px; display: grid; gap: 18px; align-content: start; }
 .proj-body .eyebrow { margin-bottom: -4px; }
@@ -227,7 +228,13 @@ b, strong { font-weight: 600; }
   .pnums li { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: baseline; }
   .pnums b { min-width: 92px; }
   .pnums span { margin-top: 0; }
+  /* Two diagrams side by side are 4px type on a phone: show the LangGraph half at twice the size, fade the cut. */
+  .proj.wide .shot { aspect-ratio: 1 / 1; }
+  .proj.wide .shot img { width: 203%; max-width: none; height: auto; }
+  .proj.wide .shot::after { display: block; }
 }
+/* "ad-creative-agent" is 367px wide at 26px in Syne and would break at its hyphen on a phone; 5.6vw keeps every name on one line down to 360px. */
+@media (max-width: 479px) { .proj-body h3 { font-size: clamp(20px, 5.6vw, 26px); } }
 
 /* Stat strip */
 .stats { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
@@ -250,6 +257,7 @@ b, strong { font-weight: 600; }
 .sec-head .eyebrow { grid-column: 1 / 5; }
 .sec-head h2 { grid-column: 1 / 9; font-size: clamp(38px, 4.8vw, 64px); line-height: 1; font-weight: 800; letter-spacing: -0.025em; }
 .sec-head p { grid-column: 9 / 13; color: var(--muted); }
+.sec-head h2, .case-head h3, .contact .big h2 { text-wrap: balance; }
 @media (max-width: 899px) {
   .sec { padding: 72px 0; }
   /* 12 columns with 32px gaps need 352px, wider than a 360px phone. Every child spans the row here, so one column (same for .case and .contact .wrap below). */
@@ -289,10 +297,11 @@ b, strong { font-weight: 600; }
 }
 @media (max-width: 479px) {
   /* Syne is wide: "Salesforce" overflows a 167px column. One row per fact, numerals in a shared column. */
-  .facts { grid-template-columns: auto 1fr; gap: 14px 16px; }
+  /* align-items on the grid: align-self on the caption alone has no partner, so both children sat at the row top. */
+  .facts { grid-template-columns: auto 1fr; gap: 14px 16px; align-items: baseline; }
   .facts li { display: contents; }
   .facts b { font-size: 24px; white-space: nowrap; }
-  .facts span { margin-top: 0; align-self: baseline; }
+  .facts span { margin-top: 0; }
 }
 /* The work section ends on the ink band; no paper gap before Skills. */
 #work.sec { padding-bottom: 0; }
@@ -352,7 +361,8 @@ b, strong { font-weight: 600; }
 @media (max-width: 719px) { .dg3 { grid-template-columns: 1fr; grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6"; gap: 32px; } }
 
 /* 04 lifecycle lanes */
-.dg4 { grid-template-columns: 112px 1fr 1fr 1fr 1.45fr; grid-template-areas: "la a1 a2 a3 a4" "lb b1 b2 b3 ." "lc c1 c2 c3 ."; gap: 44px 28px; }
+/* Lanes B and C have one node fewer than lane A: their middle node spans two columns so all three outputs end in the last column. */
+.dg4 { grid-template-columns: 112px 1fr 1fr 1fr 1.45fr; grid-template-areas: "la a1 a2 a3 a4" "lb b1 b2 b2 b3" "lc c1 c2 c2 c3"; gap: 44px 28px; }
 @media (max-width: 899px) {
   .dg4 { grid-template-columns: 1fr; gap: 28px;
     grid-template-areas: "la" "a1" "a2" "a3" "a4" "lb" "b1" "b2" "b3" "lc" "c1" "c2" "c3"; }

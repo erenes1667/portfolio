@@ -31,3 +31,5 @@ All counts (32 agents, 47 hooks, 55 jobs, 1,400+ commits, 7 brands, 70 routes, 2
 Round 3: case 05 uses the resume's wording, "55 scheduled jobs" and "10+ always-on services" (the nodes name cron and systemd as the mechanism), so the case, the stat strip and the resume say the same thing.
 
 Removed in round 2 because no file holds them: per-tier role captions (scans, builds, orchestration), the Klaviyo 6 and Beehiiv 1 split, "3 rendering tiers", and the commit counts for three internal tools.
+
+Round 4: case 04 says "Email strategy for 7 US brands", the resume's wording (was "programs"). The Skills headline is "What they are built with." so it holds two lines at 1440.
