@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Enes Eren, AI agent systems</title>
+<meta name="description" content="Enes Eren designs and runs production AI agent systems: 32 role agents, 47 guard hooks, model routing and the always-on infrastructure under them.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Enes Eren, top of page"><i></i>Enes Eren</a>
+    <ul>
+      <li class="hide-m"><a href="#projects">Projects</a></li>
+      <li class="hide-m"><a href="#work">Work</a></li>
+      <li class="hide-m"><a href="#skills">Skills</a></li>
+      <li class="hide-m"><a href="#contact">Contact</a></li>
+      <li><a class="btn" href="Enes_Eren_Resume.pdf" download>Resume <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13h10"/></svg></a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero band">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow" style="--k:0">AI Automation Specialist &middot; Istanbul</p>
+      <h1 style="--k:1"><span class="w" style="--k:1">Enes</span><span class="w" style="--k:2">Eren</span></h1>
+      <p class="lead" style="--k:3">Designs and runs production AI agent systems.</p>
+      <p class="sub" style="--k:4">Agents, guard hooks, model routing and the always-on infrastructure under them. Built for a US digital agency and its sister brand since December 2024.</p>
+      <div class="cta" style="--k:5">
+        <a class="btn" href="Enes_Eren_Resume.pdf" download>Download resume <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13h10"/></svg></a>
+        <div class="links">
+          <a class="lnk" href="https://www.linkedin.com/in/enes-eren-71a51b150" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="lnk" href="https://github.com/erenes1667" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="lnk no-arrow" href="mailto:erenes1667@gmail.com">erenes1667@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-dg">
+      <div class="dg dg-hero" data-dots="2" data-edges="task>router router>haiku router>sonnet router>opus haiku>agents sonnet>agents opus>agents agents>guards:v guards>human">
+        <div class="n io" data-n="task" style="--i:0;grid-area:task"><small>input</small><b>A task</b><span>brief, campaign, bug, question</span></div>
+        <div class="n hub" data-n="router" style="--i:1;grid-area:router"><small>route</small><b>Model router</b><span>cheapest capable model</span></div>
+        <div class="stack" style="grid-area:tiers">
+          <div class="n tier" data-n="haiku" style="--i:2"><b>Haiku</b><span>scans, lookups</span></div>
+          <div class="n tier" data-n="sonnet" style="--i:2"><b>Sonnet</b><span>builds, edits, checks</span></div>
+          <div class="n tier" data-n="opus" style="--i:2"><b>Opus</b><span>orchestration</span></div>
+        </div>
+        <div class="n" data-n="agents" style="--i:3;grid-area:agents"><small>run</small><b>32 role agents</b><span>one role each</span></div>
+        <div class="n gate" data-n="guards" style="--i:4;grid-area:guards"><small>check</small><b>47 guard hooks</b><span>pre-send QA, LLM judge</span></div>
+        <div class="n io" data-n="human" style="--i:5;grid-area:human"><small>output</small><b>A human sees it</b><span>after the gates pass</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects band" id="projects">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow"><i class="dot"></i>Public proof &middot; live runs 2026-10-24</p>
+      <h2>Three projects you can run.</h2>
+      <p>Personal projects on synthetic data. Each one has the code, a live demo page and a README where every number below comes from.</p>
+    </div>
+    <div class="pgrid">
+
+      <article class="proj wide" data-reveal>
+        <figure class="shot" style="background:#F7F6F2">
+          <img src="assets/proj-agent-evals-lab.webp" width="1008" height="734" alt="Two diagrams from the agent-evals-lab demo page: the LangGraph flow from router to planner, worker, human approval and critic, and the MCP server with scope check, six tools, HMAC approval token and audit log." loading="lazy">
+          <figcaption>docs page, crop</figcaption>
+        </figure>
+        <div class="proj-body">
+          <p class="eyebrow">LangGraph &middot; MCP server &middot; evals</p>
+          <h3>agent-evals-lab</h3>
+          <p class="line">A LangGraph support assistant with its own MCP server, an eval suite with an LLM judge, and a model-routing cost study.</p>
+          <ul class="pnums">
+            <li><b>40</b><span>eval cases. Haiku passes 92.5 to 100% over two runs</span></li>
+            <li><b>$0.011</b><span>per answer on Haiku. Sonnet: $0.025 on the same suite</span></li>
+            <li><b>0.8</b><span>Cohen's kappa, Haiku judge vs 10 hand labels</span></li>
+          </ul>
+          <p class="meta">Offline test suite, fake LLM &middot; 1,681 API calls &middot; $5.78 spent, under the $6 cap</p>
+          <div class="plinks">
+            <a class="lnk" href="https://github.com/erenes1667/agent-evals-lab" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="lnk" href="https://erenes1667.github.io/agent-evals-lab/" target="_blank" rel="noopener noreferrer">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj" data-reveal>
+        <figure class="shot" style="background:#FAFAF7">
+          <img src="assets/proj-gtm-brain.webp" width="948" height="592" alt="Six first-line cards from the gtm-brain live run, each with the written line, the verbatim evidence quote from the homepage and a passed badge." loading="lazy">
+          <figcaption>docs page, crop</figcaption>
+        </figure>
+        <div class="proj-body">
+          <p class="eyebrow">Claude Code plugin &middot; MCP &middot; CLI</p>
+          <h3>gtm-brain</h3>
+          <p class="line">Turns a list of company domains into checked opening lines, and exports only what a human approved.</p>
+          <ul class="pnums">
+            <li><b>94%</b><span>first-try pass, 17 of 18, first checker prompt. Shipped prompt: 78%</span></li>
+            <li><b>$0.0165</b><span>per account. 25 accounts, $0.41 for the run</span></li>
+            <li><b>13 of 13</b><span>held-out lines passed the checker, 19 new domains</span></li>
+          </ul>
+          <p class="meta">47 offline tests &middot; n8n workflow ran once &middot; $3.49 of the $6 cap</p>
+          <div class="plinks">
+            <a class="lnk" href="https://github.com/erenes1667/gtm-brain" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="lnk" href="https://erenes1667.github.io/gtm-brain/" target="_blank" rel="noopener noreferrer">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj" data-reveal>
+        <figure class="shot" style="background:#FBF7EF">
+          <img src="assets/proj-ad-creative-agent.webp" width="1050" height="656" alt="The top three ad concepts from the ad-creative-agent run: three dark lantern images with headlines, scores and the copy for Meta, TikTok and Google UAC under each." loading="lazy">
+          <figcaption>docs page, crop</figcaption>
+        </figure>
+        <div class="proj-body">
+          <p class="eyebrow">Agent pipeline &middot; vision critic &middot; ranker</p>
+          <h3>ad-creative-agent</h3>
+          <p class="line">Turns a launch brief into scored ad concepts: three audiences, three hooks each, copy for three platforms, an image per concept and a ranked top 6.</p>
+          <ul class="pnums">
+            <li><b>$0.36</b><span>per full run: 9 concepts, top 6, 18 model calls</span></li>
+            <li><b>0 of 108</b><span>concepts with a banned claim, 12 briefs</span></li>
+            <li><b>9 to 0</b><span>near-repeat angles, creative memory off then on</span></li>
+          </ul>
+          <p class="meta">49 offline tests &middot; vision critic blocked 15 of 15 seeded defects &middot; about $5.91 of the $6 cap</p>
+          <div class="plinks">
+            <a class="lnk" href="https://github.com/erenes1667/ad-creative-agent" target="_blank" rel="noopener noreferrer">Code</a>
+            <a class="lnk" href="https://erenes1667.github.io/ad-creative-agent/" target="_blank" rel="noopener noreferrer">Live demo</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Key numbers">
+  <div class="wrap">
+    <div class="s"><b>32</b><span>role agents</span></div>
+    <div class="s"><b>47</b><span>guard hooks</span></div>
+    <div class="s"><b>55</b><span>scheduled jobs on an always-on VPS</span></div>
+    <div class="s"><b>1,400+</b><span>commits on one outbound platform</span></div>
+    <div class="s"><b>7</b><span>US brands on lifecycle email</span></div>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow"><i class="dot"></i>Work at a US agency &middot; 2024 to 2026</p>
+      <h2>Five systems I built or run.</h2>
+      <p>Work done at a US digital agency, clients anonymized. Each schematic shows the real mechanism: inputs, agents, gates, model tiers and outputs.</p>
+    </div>
+
+    <!-- 01 Agent architecture -->
+    <article class="case full" id="c1" data-reveal>
+      <div class="case-head">
+        <div class="case-num">01</div>
+        <p class="eyebrow">Agent architecture &middot; Claude Code</p>
+        <h3>32 agents, 47 checks, and the cheapest model that can do the job.</h3>
+        <p class="line">Tasks are routed to the cheapest capable model, run under a circuit breaker, scored by an LLM judge and checked by guard hooks before a human sees the result.</p>
+        <p class="note">Earned a raise in Feb 2026 after a live demo of this system to the CEO.</p>
+      </div>
+      <div class="case-dg">
+        <div class="dg dg1" data-edges="task>router router>haiku router>sonnet router>opus haiku>agents sonnet>agents opus>agents agents>runner runner>critic:v critic>hooks hooks>human critic~agents:v notes>agents:v idx>agents:v">
+          <div class="n io" data-n="task" style="grid-area:task"><small>input</small><b>Task</b></div>
+          <div class="n hub" data-n="router" style="grid-area:router"><small>route</small><b>Model router</b><span>cheapest capable</span></div>
+          <div class="stack" style="grid-area:tiers">
+            <div class="n tier" data-n="haiku"><b>Haiku</b></div>
+            <div class="n tier" data-n="sonnet"><b>Sonnet</b></div>
+            <div class="n tier" data-n="opus"><b>Opus</b></div>
+          </div>
+          <div class="n" data-n="agents" style="grid-area:agents"><small>run</small><b>32 role agents</b><span>one role each</span></div>
+          <div class="n" data-n="runner" style="grid-area:runner"><small>supervise</small><b>Worker runner</b><span>9-call circuit breaker</span></div>
+          <div class="n" data-n="notes" style="grid-area:notes"><small>memory</small><b>225 expertise notes</b><span>one per real failure</span></div>
+          <div class="n" data-n="idx" style="grid-area:idx"><small>search</small><b>7,900-doc index</b><span>SQLite FTS5, keyword</span></div>
+          <div class="n" data-n="critic" style="grid-area:critic"><small>score</small><b>LLM-as-judge</b><span>scores output before a human sees it</span></div>
+          <div class="n gate" data-n="hooks" style="grid-area:hooks"><small>check</small><b>47 guard hooks</b><span>pre-send QA, cost routing, LLM judge</span></div>
+          <div class="n io" data-n="human" style="grid-area:human"><small>output</small><b>Human</b></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>32</b><span>role agents</span></li>
+        <li><b>47</b><span>guard hooks</span></li>
+        <li><b>3 tiers</b><span>Haiku, Sonnet, Opus</span></li>
+        <li><b>9 calls</b><span>circuit breaker on the worker runner</span></li>
+      </ul>
+    </article>
+  </div>
+
+  <!-- 02 Outbound platform, dark band -->
+  <div class="band">
+    <div class="wrap">
+      <article class="case alt" id="c2" data-reveal>
+        <div class="case-head">
+          <div class="case-num">02</div>
+          <p class="eyebrow">Outbound platform &middot; the agency's own</p>
+          <h3>Contact-form outreach, built and run end to end.</h3>
+          <p class="line">The agency's own outbound engine. A Next.js app on Prisma and PostgreSQL, with a Python worker on systemd timers. 1,400 commits and counting.</p>
+        </div>
+        <div class="case-dg">
+          <div class="dg dg2" data-edges="lists>app app>db:v db>worker:h worker>forms">
+            <div class="n io" data-n="lists" style="grid-area:lists"><small>input</small><b>Prospect lists</b></div>
+            <div class="n hub" data-n="app" style="grid-area:app"><small>app</small><b>Next.js</b><span>70 API routes</span></div>
+            <div class="n" data-n="db" style="grid-area:db"><small>store</small><b>PostgreSQL</b><span>23 data models, Prisma</span></div>
+            <div class="n" data-n="worker" style="grid-area:worker"><small>run</small><b>Python worker</b><span>systemd services and timers</span></div>
+            <div class="n io" data-n="forms" style="grid-area:forms"><small>output</small><b>Contact forms</b><span>on the target sites</span></div>
+          </div>
+        </div>
+        <ul class="facts">
+          <li><b>70</b><span>API routes</span></li>
+          <li><b>23</b><span>data models</span></li>
+          <li><b>1,400+</b><span>commits</span></li>
+          <li><b>systemd</b><span>services and timers run the worker</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- 03 Lead scoring, full width -->
+    <article class="case full" id="c3" data-reveal>
+      <div class="case-head">
+        <div class="case-num">03</div>
+        <p class="eyebrow">B2B lead scoring &middot; a US software company</p>
+        <h3>Anonymous site visits in, scored accounts in Salesforce out.</h3>
+        <p class="line">Visitor intelligence names the company and Clay enriches it. 11 n8n workflows score it, stage it in Google Sheets and route it to the sales team's Salesforce.</p>
+      </div>
+      <div class="case-dg">
+        <div class="dg dg3" data-edges="p1>p2 p2>p3 p3>p4 p4>p5 p5>p6">
+          <div class="n io" data-n="p1" style="grid-area:p1"><small>input</small><b>Site visit</b><span>anonymous</span></div>
+          <div class="n" data-n="p2" style="grid-area:p2"><small>identify</small><b>Visitor intelligence</b><span>company behind the visit</span></div>
+          <div class="n" data-n="p3" style="grid-area:p3"><small>enrich</small><b>Clay</b><span>enrichment data</span></div>
+          <div class="n hub" data-n="p4" style="grid-area:p4"><small>score</small><b>11 n8n workflows</b><span>score and route</span></div>
+          <div class="n" data-n="p5" style="grid-area:p5"><small>stage</small><b>Google Sheets</b><span>staging before the CRM</span></div>
+          <div class="n io" data-n="p6" style="grid-area:p6"><small>output</small><b>Salesforce</b><span>routed to sales</span></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>11</b><span>n8n workflows</span></li>
+        <li><b>Clay</b><span>enrichment</span></li>
+        <li><b>Sheets</b><span>staging before the CRM</span></li>
+        <li><b>Salesforce</b><span>routing to the sales team</span></li>
+      </ul>
+    </article>
+
+    <!-- 04 Lifecycle and revenue -->
+    <article class="case full" id="c4" data-reveal>
+      <div class="case-head">
+        <div class="case-num">04</div>
+        <p class="eyebrow">Lifecycle email &middot; 7 US brands</p>
+        <h3>Email programs for 7 US brands, and the tooling around them.</h3>
+        <p class="line">Klaviyo and Beehiiv programs, an AMP email engine, a Stripe upsell API and an automatic pre-send check.</p>
+      </div>
+      <div class="case-dg">
+        <div class="dg dg4" data-edges="a1>a2 a2>klaviyo a2>beehiiv klaviyo>a4 beehiiv>a4 b1>b2 b2>b3 c1>c2 c2>c3">
+          <div class="lane" style="grid-area:la">lane A<b>Programs</b></div>
+          <div class="n io" data-n="a1" style="grid-area:a1"><small>input</small><b>Strategy and copy</b><span>calendar, segments, offers</span></div>
+          <div class="n gate" data-n="a2" style="grid-area:a2"><small>check</small><b>Pre-send check</b><span>links, images, renders</span></div>
+          <div class="stack" style="grid-area:a3">
+            <div class="n tier" data-n="klaviyo"><b>Klaviyo</b><span>6 brands</span></div>
+            <div class="n tier" data-n="beehiiv"><b>Beehiiv</b><span>1 newsletter</span></div>
+          </div>
+          <div class="n io" data-n="a4" style="grid-area:a4"><small>output</small><b>7 US brands</b><span>e-commerce and B2B</span></div>
+
+          <div class="lane" style="grid-area:lb">lane B<b>Interactive</b></div>
+          <div class="n hub" data-n="b1" style="grid-area:b1"><small>engine</small><b>AMP email engine</b><span>ratings, surveys, reorder inside the email</span></div>
+          <div class="n" data-n="b2" style="grid-area:b2"><small>render</small><b>3 rendering tiers</b><span>AMP where supported, fallbacks elsewhere</span></div>
+          <div class="n io" data-n="b3" style="grid-area:b3"><small>output</small><b>Every inbox</b><span>interactive where supported</span></div>
+
+          <div class="lane" style="grid-area:lc">lane C<b>Revenue</b></div>
+          <div class="n io" data-n="c1" style="grid-area:c1"><small>input</small><b>Stripe checkout</b><span>a purchase completes</span></div>
+          <div class="n hub" data-n="c2" style="grid-area:c2"><small>api</small><b>Post-purchase upsell</b><span>one more offer after checkout</span></div>
+          <div class="n io" data-n="c3" style="grid-area:c3"><small>output</small><b>Slack alert</b><span>to the sales team</span></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>7</b><span>brands, Klaviyo and Beehiiv</span></li>
+        <li><b>3</b><span>rendering tiers in the AMP engine</span></li>
+        <li><b>Stripe</b><span>checkout and post-purchase upsell API</span></li>
+        <li><b>Pre-send</b><span>links, images and renders checked before send</span></li>
+      </ul>
+    </article>
+
+    <!-- 05 Ops and local AI -->
+    <article class="case full" id="c5" data-reveal>
+      <div class="case-head">
+        <div class="case-num">05</div>
+        <p class="eyebrow">Always-on ops &middot; Linux VPS and local GPU</p>
+        <h3>A VPS that runs the day and a GPU that transcribes for free.</h3>
+        <p class="line">55 cron jobs and 10+ systemd services run the schedule. A local RTX 4080 runs Whisper large-v3 for team notes.</p>
+      </div>
+      <div class="case-dg">
+        <div class="dg dg5" data-edges="cron>v2 sysd>v2 v2>v3 v3>v4 g1>g2 g2>g3">
+          <div class="lane" style="grid-area:lv">always on<b>Linux VPS</b></div>
+          <div class="stack" style="grid-area:v1">
+            <div class="n tier" data-n="cron"><b>55 cron jobs</b><span>the schedule</span></div>
+            <div class="n tier" data-n="sysd"><b>10+ systemd services</b><span>always running</span></div>
+          </div>
+          <div class="n" data-n="v2" style="grid-area:v2"><small>watch</small><b>Landing-page monitors</b><span>every 3 hours</span></div>
+          <div class="n hub" data-n="v3" style="grid-area:v3"><small>assist</small><b>Telegram assistant</b><span>Claude API, prompt caching</span></div>
+          <div class="n io" data-n="v4" style="grid-area:v4"><small>output</small><b>Phone</b><span>alerts and answers</span></div>
+
+          <div class="lane" style="grid-area:lg">local<b>RTX 4080</b></div>
+          <div class="n io" data-n="g1" style="grid-area:g1"><small>input</small><b>Voice and video notes</b><span>from the team</span></div>
+          <div class="n hub" data-n="g2" style="grid-area:g2"><small>model</small><b>Whisper large-v3</b><span>on the local GPU</span></div>
+          <div class="n io" data-n="g3" style="grid-area:g3"><small>output</small><b>Transcript and translation</b><span>no per-minute cost</span></div>
+        </div>
+      </div>
+      <ul class="facts">
+        <li><b>55</b><span>cron jobs</span></li>
+        <li><b>10+</b><span>systemd services</span></li>
+        <li><b>3 h</b><span>landing-page monitor interval</span></li>
+        <li><b>$0</b><span>per minute of transcription</span></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="sec skills" id="skills">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <p class="eyebrow"><i class="dot"></i>Skills</p>
+      <h2>What the systems are built with.</h2>
+      <p>Tools I use every day. Highlighted ones appear in the systems above.</p>
+    </div>
+    <div class="skill-rows" data-reveal>
+      <div class="skill-row">
+        <h4>Agents and LLM ops</h4>
+        <ul><li class="hi">Claude Code agents</li><li class="hi">Model routing</li><li class="hi">Guard hooks</li><li class="hi">LLM-as-judge</li><li class="hi">LangGraph</li><li class="hi">MCP servers</li><li>Prompt caching</li><li>Claude API</li><li>Whisper large-v3</li><li>Circuit breakers</li></ul>
+      </div>
+      <div class="skill-row">
+        <h4>Backend and data</h4>
+        <ul><li class="hi">TypeScript</li><li class="hi">Next.js</li><li>Node</li><li>Express 5</li><li class="hi">Python</li><li>Prisma</li><li>PostgreSQL</li><li>Supabase</li><li>SQLite FTS5</li><li>Stripe API</li></ul>
+      </div>
+      <div class="skill-row">
+        <h4>Automation and infra</h4>
+        <ul><li class="hi">n8n</li><li>Clay</li><li>Salesforce</li><li>Google Sheets</li><li class="hi">systemd and cron</li><li>Linux VPS</li><li>Railway</li><li>Telegram bots</li></ul>
+      </div>
+      <div class="skill-row">
+        <h4>Email and outbound</h4>
+        <ul><li class="hi">Klaviyo</li><li>Beehiiv</li><li>AMP email</li><li>Mailgun</li><li>Instantly</li><li>StoreLeads</li><li>LeadMagic</li><li>Snov</li></ul>
+      </div>
+      <div class="skill-row">
+        <h4>Languages</h4>
+        <ul><li>Turkish, native</li><li>English, fluent, daily with US clients and leadership</li></ul>
+      </div>
+    </div>
+    <div class="repos" data-reveal>
+      <p class="eyebrow">Also shipped</p>
+      <div class="repo"><b>Client onboarding hub</b><span>Express 5, Supabase, Railway. 600+ commits</span></div>
+      <div class="repo"><b>Design preview tool</b><span>321 commits</span></div>
+      <div class="repo"><b>Klaviyo flow checker</b><span>221 commits</span></div>
+      <div class="repo"><b>AI-visibility funnel</b><span>104 commits</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact band" id="contact">
+  <div class="wrap">
+    <div class="big" data-reveal>
+      <p class="eyebrow"><i class="dot"></i>Contact</p>
+      <h2>Let's talk about the system you need built or run.</h2>
+      <a class="mail" href="mailto:erenes1667@gmail.com">erenes1667@gmail.com</a>
+    </div>
+    <div class="side" data-reveal>
+      <div class="row">
+        <a class="lnk" href="https://www.linkedin.com/in/enes-eren-71a51b150" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="lnk" href="https://github.com/erenes1667" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="lnk no-arrow" href="Enes_Eren_Resume.pdf" download>Download resume (PDF)</a>
+      </div>
+      <p><b>Istanbul, Turkey, UTC+3.</b> Remote with US teams since December 2024. Turkish native, English fluent.</p>
+      <p><b>Before this:</b> Project Manager and Game Designer at Studio Of The Hawk, 2023 to 2024, 13 mobile game projects from concept to App Store launch. BA Digital Game Design, Istanbul Aydin University, 2019 to 2024.</p>
+    </div>
+    <div class="foot">
+      <span>Enes Eren, 2026. Unlisted page for job applications.</span>
+      <span>Plain HTML, CSS and JS. No framework, no analytics.</span>
+    </div>
+  </div>
+</section>
+
+</main>
+<script src="assets/app.js" defer onerror="document.documentElement.classList.remove('js')"></script>
+</body>
+</html>
