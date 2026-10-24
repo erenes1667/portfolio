@@ -20,11 +20,11 @@
   <div class="wrap">
     <a class="mark" href="#top" aria-label="Enes Eren, top of page"><i></i>Enes Eren</a>
     <ul>
-      <li class="hide-m"><a href="#projects">Projects</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li class="hide-m"><a href="#work">Work</a></li>
       <li class="hide-m"><a href="#skills">Skills</a></li>
-      <li class="hide-m"><a href="#contact">Contact</a></li>
-      <li><a class="btn" href="Enes_Eren_Resume.pdf" download>Resume <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13h10"/></svg></a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="btn" href="Enes_Eren_Resume.pdf" download aria-label="Download resume"><span class="t">Resume</span> <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13h10"/></svg></a></li>
     </ul>
   </div>
 </header>
@@ -53,9 +53,9 @@
         <div class="n io" data-n="task" style="--i:0;grid-area:task"><small>input</small><b>A task</b><span>brief, campaign, bug, question</span></div>
         <div class="n hub" data-n="router" style="--i:1;grid-area:router"><small>route</small><b>Model router</b><span>cheapest capable model</span></div>
         <div class="stack" style="grid-area:tiers">
-          <div class="n tier" data-n="haiku" style="--i:2"><b>Haiku</b><span>scans, lookups</span></div>
-          <div class="n tier" data-n="sonnet" style="--i:2"><b>Sonnet</b><span>builds, edits, checks</span></div>
-          <div class="n tier" data-n="opus" style="--i:2"><b>Opus</b><span>orchestration</span></div>
+          <div class="n tier" data-n="haiku" style="--i:2"><b>Haiku</b></div>
+          <div class="n tier" data-n="sonnet" style="--i:2"><b>Sonnet</b></div>
+          <div class="n tier" data-n="opus" style="--i:2"><b>Opus</b></div>
         </div>
         <div class="n" data-n="agents" style="--i:3;grid-area:agents"><small>run</small><b>32 role agents</b><span>one role each</span></div>
         <div class="n gate" data-n="guards" style="--i:4;grid-area:guards"><small>check</small><b>47 guard hooks</b><span>pre-send QA, LLM judge</span></div>
@@ -77,7 +77,6 @@
       <article class="proj wide" data-reveal>
         <figure class="shot" style="background:#F7F6F2">
           <img src="assets/proj-agent-evals-lab.webp" width="1008" height="734" alt="Two diagrams from the agent-evals-lab demo page: the LangGraph flow from router to planner, worker, human approval and critic, and the MCP server with scope check, six tools, HMAC approval token and audit log." loading="lazy">
-          <figcaption>docs page, crop</figcaption>
         </figure>
         <div class="proj-body">
           <p class="eyebrow">LangGraph &middot; MCP server &middot; evals</p>
@@ -98,15 +97,14 @@
 
       <article class="proj" data-reveal>
         <figure class="shot" style="background:#FAFAF7;--shot-bg:#FAFAF7">
-          <img src="assets/proj-gtm-brain.webp" width="948" height="592" alt="Six first-line cards from the gtm-brain live run, each with the written line, the verbatim evidence quote from the homepage and a passed badge." loading="lazy">
-          <figcaption>docs page, crop</figcaption>
+          <img src="assets/proj-gtm-brain.webp" width="640" height="400" alt="First-line cards from the gtm-brain live run: the written line, the verbatim evidence quote from the homepage and a passed badge." loading="lazy">
         </figure>
         <div class="proj-body">
           <p class="eyebrow">Claude Code plugin &middot; MCP &middot; CLI</p>
           <h3>gtm-brain</h3>
           <p class="line">Turns a list of company domains into checked opening lines, and exports only what a human approved.</p>
           <ul class="pnums">
-            <li><b>94%</b><span>first-try pass, 17 of 18, first checker prompt. Shipped prompt: 78%</span></li>
+            <li><b>94%</b><span>first-try pass, 17 of 18, first prompt. Shipped prompt: 78%</span></li>
             <li><b>$0.0165</b><span>per account. 25 accounts, $0.41 for the run</span></li>
             <li><b>13 of 13</b><span>held-out lines passed the checker, 19 new domains</span></li>
           </ul>
@@ -120,13 +118,12 @@
 
       <article class="proj" data-reveal>
         <figure class="shot" style="background:#FBF7EF;--shot-bg:#FBF7EF">
-          <img src="assets/proj-ad-creative-agent.webp" width="1050" height="656" alt="The top three ad concepts from the ad-creative-agent run: three placeholder lantern images with headlines, scores and the copy for Meta, TikTok and Google UAC under each." loading="lazy">
-          <figcaption>docs page, crop</figcaption>
+          <img src="assets/proj-ad-creative-agent.webp" width="700" height="438" alt="The top two ad concepts from the ad-creative-agent run: placeholder lantern images with headlines, scores and the copy for Meta, TikTok and Google UAC under each." loading="lazy">
         </figure>
         <div class="proj-body">
           <p class="eyebrow">Agent pipeline &middot; vision critic &middot; ranker</p>
           <h3>ad-creative-agent</h3>
-          <p class="line">Turns a launch brief into scored ad concepts: three audiences, three hooks each, copy for three platforms, a placeholder image per concept (no diffusion model ran) and a ranked top 6.</p>
+          <p class="line">Turns a launch brief into scored ad concepts. Three audiences, three hooks each, copy for three platforms, a ranked top 6. Images are placeholders, no diffusion model ran.</p>
           <ul class="pnums">
             <li><b>$0.36</b><span>per full run: 9 concepts, top 6, 18 model calls</span></li>
             <li><b>0 of 108</b><span>concepts with a banned claim, 12 briefs</span></li>
@@ -268,15 +265,15 @@
           <div class="n io" data-n="a1" style="grid-area:a1"><small>input</small><b>Strategy and copy</b><span>calendar, segments, offers</span></div>
           <div class="n gate" data-n="a2" style="grid-area:a2"><small>check</small><b>Pre-send check</b><span>links, images, renders</span></div>
           <div class="stack" style="grid-area:a3">
-            <div class="n tier" data-n="klaviyo"><b>Klaviyo</b><span>6 brands</span></div>
-            <div class="n tier" data-n="beehiiv"><b>Beehiiv</b><span>1 newsletter</span></div>
+            <div class="n tier" data-n="klaviyo"><b>Klaviyo</b></div>
+            <div class="n tier" data-n="beehiiv"><b>Beehiiv</b></div>
           </div>
           <div class="n io" data-n="a4" style="grid-area:a4"><small>output</small><b>7 US brands</b><span>e-commerce and B2B</span></div>
 
           <div class="lane" style="grid-area:lb">lane B<b>Interactive</b></div>
-          <div class="n hub" data-n="b1" style="grid-area:b1"><small>engine</small><b>AMP email engine</b><span>ratings, surveys, reorder inside the email</span></div>
-          <div class="n" data-n="b2" style="grid-area:b2"><small>render</small><b>3 rendering tiers</b><span>AMP where supported, fallbacks elsewhere</span></div>
-          <div class="n io" data-n="b3" style="grid-area:b3"><small>output</small><b>Every inbox</b><span>interactive where supported</span></div>
+          <div class="n hub" data-n="b1" style="grid-area:b1"><small>engine</small><b>AMP email engine</b><span>interactive email</span></div>
+          <div class="n" data-n="b2" style="grid-area:b2"><small>in-email</small><b>Ratings, surveys, reorder</b></div>
+          <div class="n io" data-n="b3" style="grid-area:b3"><small>output</small><b>Inbox</b><span>the reader acts inside the email</span></div>
 
           <div class="lane" style="grid-area:lc">lane C<b>Revenue</b></div>
           <div class="n io" data-n="c1" style="grid-area:c1"><small>input</small><b>Stripe checkout</b><span>a purchase completes</span></div>
@@ -286,7 +283,7 @@
       </div>
       <ul class="facts">
         <li><b>7</b><span>brands, Klaviyo and Beehiiv</span></li>
-        <li><b>3</b><span>rendering tiers in the AMP engine</span></li>
+        <li><b>AMP</b><span>in-email ratings, surveys and reorder</span></li>
         <li><b>Stripe</b><span>checkout and post-purchase upsell API</span></li>
         <li><b>Pre-send</b><span>links, images and renders checked before send</span></li>
       </ul>
@@ -363,9 +360,7 @@
     <div class="repos" data-reveal>
       <p class="eyebrow">Also shipped</p>
       <div class="repo"><b>Client onboarding hub</b><span>Express 5, Supabase, Railway. 600+ commits</span></div>
-      <div class="repo"><b>Design preview tool</b><span>321 commits</span></div>
-      <div class="repo"><b>Klaviyo flow checker</b><span>221 commits</span></div>
-      <div class="repo"><b>AI-visibility funnel</b><span>104 commits</span></div>
+      <div class="repo"><b>Cold-email production</b><span>StoreLeads, LeadMagic and Snov enrichment, sent on Mailgun and Instantly</span></div>
     </div>
   </div>
 </section>

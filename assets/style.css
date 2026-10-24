@@ -93,14 +93,14 @@ b, strong { font-weight: 600; }
 }
 .nav.scrolled { border-bottom-color: var(--rule); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.mark { font: 800 18px/1 var(--display); letter-spacing: -0.02em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.mark { font: 800 18px/1 var(--display); letter-spacing: -0.02em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: 10px; white-space: nowrap; flex-shrink: 0; }
 .mark i { width: 10px; height: 10px; background: var(--accent); display: inline-block; }
 .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 28px; align-items: center; }
 .nav ul a { font: 500 14px/1 var(--mono); text-decoration: none; color: var(--body); letter-spacing: 0.02em; }
 .nav ul a:hover { color: var(--accent); }
 .nav ul a.btn { height: 38px; padding: 0 14px; font: 600 14px/1 var(--sans); color: var(--paper); }
 .nav ul a.btn:hover { color: var(--accent-ink); }
-@media (max-width: 719px) { .nav ul li.hide-m { display: none; } .nav ul { gap: 18px; } }
+@media (max-width: 719px) { .nav ul li.hide-m { display: none; } .nav ul { gap: 16px; } .nav ul a.btn { padding: 0 11px; } .nav ul a.btn .t { display: none; } }
 
 /* Buttons and links */
 .btn {
@@ -173,7 +173,8 @@ b, strong { font-weight: 600; }
 .dg-hero.settled .n { transition-delay: 0s; }
 .js .dg svg.edges { opacity: 0; }
 .dg.booted svg.edges, .in .dg svg.edges { opacity: 1; transition: opacity .5s var(--ease); }
-.js .dg svg.edges path.draw { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); }
+/* marker-end: none beats the presentation attribute, so the arrowhead waits for the stroke (app.js drops .draw on animationend). */
+.js .dg svg.edges path.draw { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); marker-end: none; }
 .dg.booted svg.edges path.draw, .in .dg svg.edges path.draw { animation: dash .7s var(--ease) forwards; animation-delay: var(--d, 0s); }
 @keyframes dash { to { stroke-dashoffset: 0; } }
 
@@ -196,7 +197,7 @@ b, strong { font-weight: 600; }
 .proj.wide .shot img { object-fit: contain; object-position: center; }
 /* Narrow cards crop mid-row: dissolve the cut edge into the page colour instead of slicing it. */
 .proj:not(.wide) .shot::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: linear-gradient(to bottom, transparent, var(--shot-bg, #F7F7F5)); pointer-events: none; }
-.shot figcaption { position: absolute; z-index: 1; right: 10px; bottom: 10px; font: 500 13px/1 var(--mono); letter-spacing: 0.04em; color: #5B6573; background: rgba(255, 255, 255, .92); padding: 5px 7px; border-radius: 2px; }
+@media (prefers-color-scheme: dark) { .shot { filter: brightness(.93); } }
 .proj-body { padding: 32px 32px 30px; display: grid; gap: 18px; align-content: start; }
 .proj-body .eyebrow { margin-bottom: -4px; }
 .proj-body h3 { font-size: clamp(26px, 2.4vw, 32px); line-height: 1.05; font-weight: 800; }
@@ -272,6 +273,10 @@ b, strong { font-weight: 600; }
 .facts { grid-column: 1 / 13; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px 32px; border-top: 1px solid var(--rule); padding: 22px 0 0; margin: 0; list-style: none; order: 3; }
 .facts b { display: block; font: 800 28px/1.05 var(--display); color: var(--ink); letter-spacing: -0.02em; }
 .facts span { display: block; margin-top: 8px; font: 400 13px/1.45 var(--mono); color: var(--muted); }
+/* Full-width cases: the facts fill the right half of the header row instead of a fourth row under the diagram. */
+@media (min-width: 900px) {
+  .case.full .facts { grid-column: 8 / 13; grid-row: 1; order: 0; grid-template-columns: 1fr 1fr; gap: 28px 32px; align-self: end; }
+}
 @media (max-width: 899px) {
   .case { padding: 56px 0; gap: 28px; }
   .case-head, .case-dg, .case.alt .case-head, .case.alt .case-dg, .case.full .case-head, .case.full .case-dg { grid-column: 1 / -1; order: 0; }
@@ -322,7 +327,6 @@ b, strong { font-weight: 600; }
 .dg-hero .n { padding: 12px 12px 13px; }
 .dg-hero .n b { font-size: 17px; }
 @media (max-width: 899px) { .dg-hero { grid-template-columns: 1fr; grid-template-areas: "task" "router" "tiers" "agents" "guards" "human"; gap: 32px; } .dg-hero .stack { grid-auto-flow: column; grid-auto-columns: 1fr; } }
-@media (max-width: 479px) { .dg-hero .tier span { display: none; } }
 
 /* 01 agents */
 .dg1 { grid-template-columns: repeat(5, 1fr); grid-template-areas: ". . . notes idx" "task router tiers agents runner" ". . human hooks critic"; }
@@ -371,7 +375,7 @@ b, strong { font-weight: 600; }
 .skill-row ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-row li { font: 400 14px/1 var(--sans); color: var(--ink); border: 1px solid var(--rule-strong); border-radius: 3px; padding: 8px 10px; background: var(--surface); }
 .skill-row li.hi { border-color: var(--ink); background: var(--ink); color: var(--paper); font-weight: 500; }
-.repos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--rule); }
+.repos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--rule); }
 .repos .eyebrow { grid-column: 1 / -1; margin-bottom: -8px; }
 .repo b { display: block; font: 600 16px/1.3 var(--sans); color: var(--ink); }
 .repo span { display: block; margin-top: 6px; font: 400 13px/1.5 var(--mono); color: var(--muted); }

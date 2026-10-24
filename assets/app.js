@@ -109,6 +109,8 @@
       var p = svg.querySelector('#' + e.pid);
       e.len = p.getTotalLength();
       p.style.setProperty('--len', e.len.toFixed(1));
+      // The arrowhead is hidden while .draw is on (CSS); it appears the moment the line reaches the node.
+      p.addEventListener('animationend', function () { p.classList.remove('draw'); }, { once: true });
     });
 
     // Flow dots: HTML elements on CSS offset-path (first frame is computed synchronously, no SMIL flash).

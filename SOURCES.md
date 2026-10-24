@@ -25,4 +25,6 @@ Repos: https://github.com/erenes1667/agent-evals-lab , https://github.com/erenes
 
 ## Work section
 
-All counts (32 agents, 47 hooks, 55 jobs, 1,400+ commits, 7 brands, 70 routes, 23 models, 11 workflows, 225 notes, 7,900 docs, 9-call breaker, 3 tiers, 10+ services, 3 h interval) are the ones in `Enes_Eren_Resume.pdf` in this folder. The employer and its clients are not named on the page.
+All counts (32 agents, 47 hooks, 55 jobs, 1,400+ commits, 7 brands, 70 routes, 23 models, 11 workflows, 225 notes, 7,900 docs, 9-call breaker, 3 tiers meaning the Haiku, Sonnet and Opus choice, 10+ services, 3 h interval, 600+ commits on the onboarding hub, 13 game projects) are the ones in `Enes_Eren_Resume.pdf` in this folder. The "Also shipped" items (onboarding hub, cold-email production) are the resume's Client tools and Data and GTM pipelines lines. The AMP engine is described with the resume's words only (in-email ratings, surveys, reorder). The employer and its clients are not named on the page; the resume PDF names them.
+
+Removed in round 2 because no file holds them: per-tier role captions (scans, builds, orchestration), the Klaviyo 6 and Beehiiv 1 split, "3 rendering tiers", and the commit counts for three internal tools.
